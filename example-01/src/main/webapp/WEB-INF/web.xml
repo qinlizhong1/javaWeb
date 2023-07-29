@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- 查看班级列表 -->
+    <servlet>
+        <servlet-name>class-list</servlet-name>
+        <servlet-class>servlet.ClassListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-list</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>welcome.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 查看班级详情 -->
+    <servlet>
+        <servlet-name>class-detail</servlet-name>
+        <servlet-class>servlet.ClassDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-detail</servlet-name>
+        <url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+
+    <!-- 新增班级 -->
+    <servlet>
+        <servlet-name>class-add</servlet-name>
+        <servlet-class>servlet.ClassAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <!-- 删除班级 -->
+    <servlet>
+        <servlet-name>class-del</servlet-name>
+        <servlet-class>servlet.ClassDelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-del</servlet-name>
+        <url-pattern>/del</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 修改班级信息 -->
+    <servlet>
+        <servlet-name>class-update</servlet-name>
+        <servlet-class>servlet.ClassUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>class-edit</servlet-name>
+        <servlet-class>servlet.ClassEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>class-edit</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+</web-app>
